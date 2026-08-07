@@ -225,11 +225,11 @@ button, input, textarea, select { font: inherit; }
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(340px, 0.72fr);
-  gap: clamp(48px, 8vw, 110px);
+  grid-template-columns: minmax(0, 1.18fr) minmax(310px, 0.62fr);
+  gap: clamp(42px, 6vw, 82px);
   align-items: center;
   min-height: auto;
-  padding-block: clamp(64px, 7vw, 96px) clamp(42px, 5vw, 68px);
+  padding-block: clamp(52px, 5.5vw, 74px) clamp(18px, 2vw, 28px);
 }
 
 .hero h1 {
@@ -289,7 +289,7 @@ button, input, textarea, select { font: inherit; }
 
 .portrait-card {
   position: relative;
-  width: min(100%, 430px);
+  width: min(100%, 390px);
   justify-self: end;
   align-self: center;
   margin: 0;
@@ -325,18 +325,18 @@ button, input, textarea, select { font: inherit; }
 .portrait-card img {
   width: 100%;
   height: auto;
-  aspect-ratio: 900 / 1306;
+  aspect-ratio: 900 / 773;
   border-radius: calc(var(--radius-lg) - 8px);
   object-fit: cover;
   background: var(--surface);
 }
-.projects-section { padding: 28px 0 84px; }
+.projects-section { padding: 8px 0 84px; }
 .projects-heading {
   display: grid;
   grid-template-columns: 1fr minmax(280px, 0.68fr);
   gap: 40px;
   align-items: end;
-  padding-bottom: 38px;
+  padding-bottom: 20px;
 }
 .projects-heading h2,
 .contact-card h2 {
@@ -619,7 +619,7 @@ button, input, textarea, select { font: inherit; }
 }
 
 @media (max-width: 1020px) {
-  .hero { grid-template-columns: minmax(0, 1fr) minmax(280px, 0.55fr); gap: 48px; }
+  .hero { grid-template-columns: minmax(0, 1fr) minmax(270px, 0.5fr); gap: 40px; }
   .project-inner,
   .project:nth-child(even) .project-inner { grid-template-columns: 1fr; }
   .project:nth-child(even) .project-media { order: 0; }
@@ -647,14 +647,14 @@ button, input, textarea, select { font: inherit; }
   .site-nav.is-open { transform: translateY(0); visibility: visible; }
   .site-nav > a { padding: 15px 12px; }
   .site-nav .button { margin-top: 10px; }
-  .hero { grid-template-columns: 1fr; min-height: auto; padding-block: 64px 54px; }
+  .hero { grid-template-columns: 1fr; min-height: auto; padding-block: 52px 28px; }
   .hero h1 { font-size: clamp(2.85rem, 12vw, 4.2rem); }
   .hero-summary { margin-top: 24px; }
   .quick-facts { grid-template-columns: 1fr; }
   .quick-facts li + li { border-top: 1px solid var(--line); border-left: 0; }
-  .portrait-card { width: min(100%, 440px); max-width: 440px; justify-self: center; }
-  .projects-section { padding-top: 40px; }
-  .projects-heading { grid-template-columns: 1fr; padding-bottom: 40px; }
+  .portrait-card { width: min(100%, 390px); max-width: 390px; justify-self: center; }
+  .projects-section { padding-top: 20px; }
+  .projects-heading { grid-template-columns: 1fr; padding-bottom: 24px; }
   .project { min-height: 0; padding: 14px; }
   .project-inner { gap: 34px; }
   .project-copy { padding: 0 7px 10px; }
