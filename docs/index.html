@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Marko Jevtic is a fourth-year Computer Engineering student focused on hardware design and personal engineering projects.">
+  <meta name="theme-color" content="#070b14">
+  <title>Marko Jevtic — Hardware Design Portfolio</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="portfolio-data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="page-grid" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-mark" aria-hidden="true">MJ</span>
+        <span id="brand-name">Marko Jevtic</span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a id="nav-github" href="#" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="button button-small" id="nav-contact" href="mailto:your-email@example.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero container" id="about" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow hero-role" id="hero-eyebrow">4th Computer Engineering Student</p>
+        <h1 id="hero-title">Marko Jevtic</h1>
+        <p class="hero-summary" id="hero-summary">Hardware Design Personal Project Portfolio</p>
+        <div class="hero-actions">
+          <a class="button" href="#projects">Explore projects</a>
+          <a class="text-link" id="hero-github" href="#" target="_blank" rel="noreferrer">
+            GitHub profile <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <ul class="quick-facts" id="quick-facts" aria-label="Education and focus"></ul>
+      </div>
+
+      <figure class="portrait-card reveal">
+        <img id="profile-photo" src="assets/images/marko-jevtic-profile.webp" alt="Professional portrait of Marko Jevtic" width="900" height="773">
+      </figure>
+    </section>
+
+    <section class="projects-section" id="projects" aria-labelledby="projects-title">
+      <div class="container projects-heading reveal">
+        <div>
+          <p class="eyebrow">Selected engineering work</p>
+          <h2 id="projects-title">Hardware projects</h2>
+        </div>
+      </div>
+
+      <div id="projects-list" class="projects-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="current-year"></span> <span id="footer-name">Marko Jevtic</span></p>
+      <div class="footer-links" id="footer-links"></div>
+    </div>
+  </footer>
+
+  <nav class="project-progress" id="project-progress" aria-label="Jump to project"></nav>
+
+  <noscript>
+    <div class="noscript-message">This portfolio needs JavaScript enabled to load the project content.</div>
+  </noscript>
+</body>
+</html>
