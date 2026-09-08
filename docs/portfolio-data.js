@@ -30,7 +30,7 @@ window.PORTFOLIO_DATA = {
     {
       title: "RP2350A Development Board",
       tagline: "",
-      description: "WIP",
+      description: "RP2350A microcontroller interfaced with the W25Q128JVS 16 MB external flash and ABM8-272-T3 12MHz oscillator for storage and timing.\n\nBuilt-in Indicator LED connected to GPIO0, GPIO pins 1-29 broken out alongside 3V3 and GND signals using two 16-pin connectors. ",
       technologies: ["RP2350A", "PCB Design", "Microcontroller Interfacing"],
       github: "https://github.com/Marko411/RP2350A-Development-Board",
       liveUrl: "",
