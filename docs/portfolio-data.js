@@ -40,7 +40,7 @@ window.PORTFOLIO_DATA = {
     {
       title: "RP2354A Minima Board Family",
       tagline: "",
-      description: "WIP",
+      description: "Miniature version of my development board project featuring the RP2354A, the built-in flash version of the RP2350, interfaced with an ABM8-272-T3 12MHz oscillator for timing and an LED on GPIO0 for indication. Connects to a GPIO expansion board using an FPC cable which breaks out GPIO 0-29 signals and 3V3, 5V and GND rails. ",
       technologies: ["RP2354A", "Built-In Flash MCU Interfacing", "PCB Miniaturization"],
       github: "https://github.com/Marko411/RP2354A-Minima",
       liveUrl: "",
@@ -57,7 +57,7 @@ window.PORTFOLIO_DATA = {
       title: "HDMI to CSI Adapter",
       tagline: "",
       description: "WIP",
-      technologies: ["Capture Card Design", "High-Speed Serial PCB Design", "HDMI & MIPI (CSI) Interfaces"],
+      technologies: ["Capture Card Design", "ESD Protection Design", "High-Speed Serial HDMI & MIPI (CSI) Interfaces"],
       github: "https://github.com/Marko411/HDMI_To_CSI_Adapter",
       liveUrl: "",
       images: [
@@ -73,7 +73,7 @@ window.PORTFOLIO_DATA = {
       title: "Linux Mini PC",
       tagline: "",
       description: "WIP",
-      technologies: ["High-speed Serial SoM Carrier Design", "USB-3.0 Interface", "MIPI (CSI + DSI) Interfaces"],
+      technologies: ["SoM Carrier Design", "Rechargeable Power System Design", "High-speed Serial USB-3.0 and MIPI (CSI + DSI) Interfaces"],
       github: "https://github.com/Marko411/Linux-Mini-PC",
       liveUrl: "",
       images: [
