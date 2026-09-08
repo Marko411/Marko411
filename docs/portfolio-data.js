@@ -40,7 +40,7 @@ window.PORTFOLIO_DATA = {
     {
       title: "RP2354A Minima Board Family",
       tagline: "",
-      description: "Miniature version of my development board project featuring the RP2354A, the built-in flash version of the RP2350, interfaced with an ABM8-272-T3 12MHz oscillator for timing and an LED on GPIO0 for indication. Connects to a GPIO expansion board using an FPC cable which breaks out GPIO 0-29 signals and 3V3, 5V and GND rails. ",
+      description: "Miniature 4-layer version of my development board project featuring the RP2354A, the built-in flash version of the RP2350, interfaced with an ABM8-272-T3 12MHz oscillator for timing and an LED on GPIO0 for indication. Connects to a GPIO expansion board using an FPC cable which breaks out GPIO 0-29 signals and 3V3, 5V and GND rails. ",
       technologies: ["RP2354A", "Built-In Flash MCU Interfacing", "PCB Miniaturization"],
       github: "https://github.com/Marko411/RP2354A-Minima",
       liveUrl: "",
