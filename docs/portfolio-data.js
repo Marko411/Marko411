@@ -1,8 +1,3 @@
-/*
-  EDIT THIS FILE to personalize the portfolio.
-  Keep exactly four project objects if you want the intended four-project layout.
-*/
-
 window.PORTFOLIO_DATA = {
   person: {
     name: "Marko Jevtic",
@@ -25,12 +20,11 @@ window.PORTFOLIO_DATA = {
       { label: "Email", url: "mailto:your-email@example.com" }
     ]
   },
-
   projects: [
     {
       title: "RP2350A Development Board",
       tagline: "",
-      description: "RP2350A microcontroller interfaced with the W25Q128JVS 16 MB external flash and ABM8-272-T3 12MHz oscillator for storage and timing.\n\nBuilt-in Indicator LED connected to GPIO0, GPIO pins 1-29 broken out alongside 3V3 and GND signals using two 16-pin connectors. ",
+      description: "2-Layer board designed in Altium Designer 25 and assembled using JLCPCB services\n\nRP2350A microcontroller interfaced with the W25Q128JVS 16 MB external flash and ABM8-272-T3 12MHz oscillator for storage and timing.\n\nBuilt-in Indicator LED connected to GPIO0, GPIO pins 1-29 broken out alongside 3V3 and GND signals using two 16-pin connectors. ",
       technologies: ["RP2350A", "PCB Design", "Microcontroller Interfacing"],
       github: "https://github.com/Marko411/RP2350A-Development-Board",
       liveUrl: "",
