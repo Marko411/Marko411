@@ -22,38 +22,6 @@ window.PORTFOLIO_DATA = {
   },
   projects: [
     {
-      title: "RP2350A Development Board",
-      tagline: "",
-      description: "2-Layer board designed in Altium Designer 25 and assembled using JLCPCB services\n\nRP2350A microcontroller interfaced with the W25Q128JVS 16 MB external flash and ABM8-272-T3 12MHz oscillator for storage and timing.\n\nBuilt-in Indicator LED connected to GPIO0, GPIO pins 1-29 broken out alongside 3V3 and GND signals using two 16-pin connectors. ",
-      technologies: ["RP2350A", "PCB Design", "Microcontroller Interfacing"],
-      github: "https://github.com/Marko411/RP2350A-Development-Board",
-      liveUrl: "",
-      images: [
-        "assets/images/rp2350a-01-render.png",
-        "assets/images/rp2350a-02-wall.webp",
-        "assets/images/rp2350a-03-hand.webp",
-        "assets/images/rp2350a-04-layers.png"
-      ],
-      video: "assets/videos/rp2350a-development-board.mp4",
-      videoPoster: "assets/images/rp2350a-video-poster.jpg"
-    },
-    {
-      title: "RP2354A Minima Board Family",
-      tagline: "",
-      description: "Miniature 4-layer version of my development board project featuring the RP2354A, the built-in flash version of the RP2350, interfaced with an ABM8-272-T3 12MHz oscillator for timing and an LED on GPIO0 for indication. Connects to a GPIO expansion board using an FPC cable which breaks out GPIO 0-29 signals and 3V3, 5V and GND rails. ",
-      technologies: ["RP2354A", "Built-In Flash MCU Interfacing", "PCB Miniaturization"],
-      github: "https://github.com/Marko411/RP2354A-Minima",
-      liveUrl: "",
-      images: [
-        "assets/images/rp2354a-minima-01-render.png",
-        "assets/images/rp2354a-minima-02.webp",
-        "assets/images/rp2354a-minima-03.webp",
-        "assets/images/rp2354a-minima-04-ribbon.webp"
-      ],
-      video: "assets/videos/project-placeholder.mp4",
-      videoPoster: "assets/images/project-placeholder.webp"
-    },
-    {
       title: "HDMI to CSI Adapter",
       tagline: "",
       description: "4-Layer board featuring the Toshiba TC358743XBG serving as an HDMI to CSI2 bridge, allowing HDMI signals to be captured and streamed to CSI (Camera Serial Interface) inputs on Linux machines. The TC358743XBG is interfaced with HDMI and CSI connectors, with the high-speed signals being impedance matched accordingly and all of the signals containing ESD protection.",
@@ -84,6 +52,38 @@ window.PORTFOLIO_DATA = {
       ],
       video: "assets/videos/project-placeholder.mp4",
       videoPoster: "assets/images/project-placeholder.webp"
+    },
+    {
+      title: "RP2354A Minima Board Family",
+      tagline: "",
+      description: "Miniature 4-layer version of my development board project featuring the RP2354A, the built-in flash version of the RP2350, interfaced with an ABM8-272-T3 12MHz oscillator for timing and an LED on GPIO0 for indication. Connects to a GPIO expansion board using an FPC cable which breaks out GPIO 0-29 signals and 3V3, 5V and GND rails. ",
+      technologies: ["RP2354A", "Built-In Flash MCU Interfacing", "PCB Miniaturization"],
+      github: "https://github.com/Marko411/RP2354A-Minima",
+      liveUrl: "",
+      images: [
+        "assets/images/rp2354a-minima-01-render.png",
+        "assets/images/rp2354a-minima-03.webp",
+        "assets/images/rp2354a-minima-04-ribbon.webp",
+        "assets/images/rp2354a-minima-02.webp"
+      ],
+      video: "assets/videos/project-placeholder.mp4",
+      videoPoster: "assets/images/project-placeholder.webp"
+    },
+    {
+      title: "RP2350A Development Board",
+      tagline: "",
+      description: "2-Layer board designed in Altium Designer 25 and assembled using JLCPCB services\n\nRP2350A microcontroller interfaced with the W25Q128JVS 16 MB external flash and ABM8-272-T3 12MHz oscillator for storage and timing.\n\nBuilt-in Indicator LED connected to GPIO0, GPIO pins 1-29 broken out alongside 3V3 and GND signals using two 16-pin connectors. ",
+      technologies: ["RP2350A", "PCB Design", "Microcontroller Interfacing"],
+      github: "https://github.com/Marko411/RP2350A-Development-Board",
+      liveUrl: "",
+      images: [
+        "assets/images/rp2350a-01-render.png",
+        "assets/images/rp2350a-02-wall.webp",
+        "assets/images/rp2350a-03-hand.webp",
+        "assets/images/rp2350a-04-layers.png"
+      ],
+      video: "assets/videos/rp2350a-development-board.mp4",
+      videoPoster: "assets/images/rp2350a-video-poster.jpg"
     }
   ]
 };
