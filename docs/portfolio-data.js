@@ -56,7 +56,7 @@ window.PORTFOLIO_DATA = {
     {
       title: "HDMI to CSI Adapter",
       tagline: "",
-      description: "WIP",
+      description: "4-Layer board featuring the Toshiba TC358743XBG serving as an HDMI to CSI2 bridge, allowing HDMI signals to be captured and streamed to CSI (Camera Serial Interface) inputs on Linux machines. The TC358743XBG is interfaced with HDMI and CSI connectors, with the high-speed signals being impedance matched accordingly and all of the signals containing ESD protection.",
       technologies: ["Capture Card Design", "ESD Protection Design", "High-Speed Serial HDMI & MIPI (CSI) Interfaces"],
       github: "https://github.com/Marko411/HDMI_To_CSI_Adapter",
       liveUrl: "",
