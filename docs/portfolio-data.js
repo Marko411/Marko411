@@ -72,7 +72,7 @@ window.PORTFOLIO_DATA = {
     {
       title: "Linux Mini PC",
       tagline: "",
-      description: "WIP",
+      description: "This project's motherboard is an 4-layer SoM carrier designed for the CM5 (Pi Compute Module 5) with CSI, DSI (Camera/Display Serial Interfaces) and USB-3.0 high-speed interfaces. The board also contains an SD card slot for external storage and uses the TI BQ25895 as the charge management chip, allowing USB-C power to recharge the Mini PC's LiPo battery.",
       technologies: ["SoM Carrier Design", "Rechargeable Power System Design", "High-speed Serial USB-3.0 and MIPI (CSI + DSI) Interfaces"],
       github: "https://github.com/Marko411/Linux-Mini-PC",
       liveUrl: "",
