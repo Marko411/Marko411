@@ -429,9 +429,9 @@ button, input, textarea, select { font: inherit; }
 }
 .media-thumbnails {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(var(--thumb-count, 5), minmax(0, 1fr));
   gap: 10px;
-  width: min(100%, 520px);
+  width: min(100%, calc(var(--thumb-count, 5) * 96px + (var(--thumb-count, 5) - 1) * 10px));
   margin: 12px auto 0;
 }
 .media-thumb {
@@ -664,7 +664,7 @@ button, input, textarea, select { font: inherit; }
   .media-thumbnails {
     gap: 7px;
     overflow-x: auto;
-    grid-template-columns: repeat(5, 84px);
+    grid-template-columns: repeat(var(--thumb-count, 5), 84px);
     padding-bottom: 4px;
     scrollbar-width: thin;
   }
