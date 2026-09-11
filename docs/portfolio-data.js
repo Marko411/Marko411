@@ -32,7 +32,7 @@ window.PORTFOLIO_DATA = {
         "assets/images/hdmi-csi-adapter-04-render.png",
         "assets/images/hdmi-csi-adapter-02.webp",
         "assets/images/hdmi-csi-adapter-03.webp",
-        "assets/images/project-placeholder.webp"
+        "assets/images/hdmi-csi-adapter-05.webp"
       ],
       video: "assets/videos/project-placeholder.mp4",
       videoPoster: "assets/images/project-placeholder.webp"
@@ -48,7 +48,7 @@ window.PORTFOLIO_DATA = {
         "assets/images/linux-mini-pc-01-render.jpg",
         "assets/images/linux-mini-pc-02-assembled.webp",
         "assets/images/linux-mini-pc-03-bare.webp",
-        "assets/images/project-placeholder.webp"
+        "assets/images/linux-mini-pc-04-enclosure.webp"
       ],
       video: "assets/videos/project-placeholder.mp4",
       videoPoster: "assets/images/project-placeholder.webp"
