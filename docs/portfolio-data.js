@@ -7,7 +7,7 @@ window.PORTFOLIO_DATA = {
     photo: "assets/images/marko-jevtic-profile.webp",
     photoAlt: "Professional portrait of Marko Jevtic",
     availability: "Hardware Design Personal Project Portfolio",
-    email: "your-email@example.com",
+    email: "mjevtic@uoguelph.ca",
     github: "https://github.com/Marko411",
     facts: [
       { value: "Four", label: "Personal projects" },
@@ -16,8 +16,8 @@ window.PORTFOLIO_DATA = {
     ],
     links: [
       { label: "GitHub", url: "https://github.com/Marko411" },
-      { label: "LinkedIn", url: "https://www.linkedin.com/in/your-profile" },
-      { label: "Email", url: "mailto:your-email@example.com" }
+      { label: "LinkedIn", url: "https://www.linkedin.com/in/marko-jevtic-904b7b344" },
+      { label: "Email", url: "mailto:mjevtic@uoguelph.ca" }
     ]
   },
   projects: [
