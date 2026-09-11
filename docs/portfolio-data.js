@@ -44,14 +44,13 @@ window.PORTFOLIO_DATA = {
       technologies: ["Capture Card Design", "ESD Protection Design", "High-Speed Serial HDMI & MIPI (CSI) Interfaces"],
       github: "https://github.com/Marko411/HDMI_To_CSI_Adapter",
       liveUrl: "",
-      images: [
-        "assets/images/hdmi-csi-adapter-04-render.png",
-        "assets/images/hdmi-csi-adapter-02.webp",
-        "assets/images/hdmi-csi-adapter-03.webp",
-        "assets/images/hdmi-csi-adapter-05.webp"
-      ],
-      video: "assets/videos/project-placeholder.mp4",
-      videoPoster: "assets/images/project-placeholder.webp"
+      media: [
+        { type: "image", src: "assets/images/hdmi-csi-adapter-04-render.png" },
+        { type: "image", src: "assets/images/hdmi-csi-adapter-05.webp" },
+        { type: "image", src: "assets/images/hdmi-csi-adapter-03.webp" },
+        { type: "video", src: "assets/videos/project-placeholder.mp4", poster: "assets/images/project-placeholder.webp" },
+        { type: "image", src: "assets/images/hdmi-csi-adapter-02.webp" }
+      ]
     },
     {
       title: "RP2354A Minima Board Family",
@@ -60,14 +59,13 @@ window.PORTFOLIO_DATA = {
       technologies: ["RP2354A", "Built-In Flash MCU Interfacing", "PCB Miniaturization"],
       github: "https://github.com/Marko411/RP2354A-Minima",
       liveUrl: "",
-      images: [
-        "assets/images/rp2354a-minima-01-render.png",
-        "assets/images/rp2354a-minima-03.webp",
-        "assets/images/rp2354a-minima-04-ribbon.webp",
-        "assets/images/rp2354a-minima-02.webp"
-      ],
-      video: "assets/videos/project-placeholder.mp4",
-      videoPoster: "assets/images/project-placeholder.webp"
+      media: [
+        { type: "image", src: "assets/images/rp2354a-minima-01-render.png" },
+        { type: "image", src: "assets/images/rp2354a-minima-03.webp" },
+        { type: "image", src: "assets/images/rp2354a-minima-04-ribbon.webp" },
+        { type: "video", src: "assets/videos/project-placeholder.mp4", poster: "assets/images/project-placeholder.webp" },
+        { type: "image", src: "assets/images/rp2354a-minima-02.webp" }
+      ]
     },
     {
       title: "RP2350A Development Board",
