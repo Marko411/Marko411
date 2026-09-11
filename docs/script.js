@@ -75,9 +75,11 @@
 
   function projectTemplate(project, index) {
     const number = String(index + 1).padStart(2, "0");
-    const firstImage = project.images?.[0] || "assets/images/project-placeholder.webp";
-    const thumbnails = [...(project.images || []).slice(0, 4).map((image, imageIndex) => `
-      <button class="media-thumb" type="button" aria-label="Show image ${imageIndex + 1} for ${escapeAttribute(project.title)}" aria-current="${imageIndex === 0 ? "true" : "false"}" data-type="image" data-src="${escapeAttribute(image)}" data-label="Image ${imageIndex + 1} of 4">
+    const images = (project.images || []).slice(0, 4);
+    const imageCount = images.length;
+    const firstImage = images[0] || "assets/images/project-placeholder.webp";
+    const thumbnails = [...images.map((image, imageIndex) => `
+      <button class="media-thumb" type="button" aria-label="Show image ${imageIndex + 1} for ${escapeAttribute(project.title)}" aria-current="${imageIndex === 0 ? "true" : "false"}" data-type="image" data-src="${escapeAttribute(image)}" data-label="Image ${imageIndex + 1} of ${imageCount}">
         <img src="${escapeAttribute(image)}" alt="" loading="lazy">
       </button>
     `), `
@@ -95,10 +97,10 @@
         <div class="project-inner container-narrow">
           <div class="project-media">
             <div class="media-stage" aria-live="polite">
-              <span class="media-count">Image 1 of 4</span>
+              <span class="media-count">Image 1 of ${Math.max(imageCount, 1)}</span>
               <img src="${escapeAttribute(firstImage)}" alt="${escapeAttribute(project.title)} preview image 1" loading="lazy">
             </div>
-            <div class="media-thumbnails" aria-label="${escapeAttribute(project.title)} media gallery">
+            <div class="media-thumbnails" style="--thumb-count: ${imageCount + 1}" aria-label="${escapeAttribute(project.title)} media gallery">
               ${thumbnails}
             </div>
           </div>
