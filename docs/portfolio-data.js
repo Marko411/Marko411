@@ -22,22 +22,6 @@ window.PORTFOLIO_DATA = {
   },
   projects: [
     {
-      title: "HDMI to CSI Adapter",
-      tagline: "",
-      description: "4-Layer board featuring the Toshiba TC358743XBG serving as an HDMI to CSI2 bridge, allowing HDMI signals to be captured and streamed to CSI (Camera Serial Interface) inputs on Linux machines. The TC358743XBG is interfaced with HDMI and CSI connectors, with the high-speed signals being impedance matched accordingly and all of the signals containing ESD protection.",
-      technologies: ["Capture Card Design", "ESD Protection Design", "High-Speed Serial HDMI & MIPI (CSI) Interfaces"],
-      github: "https://github.com/Marko411/HDMI_To_CSI_Adapter",
-      liveUrl: "",
-      images: [
-        "assets/images/hdmi-csi-adapter-04-render.png",
-        "assets/images/hdmi-csi-adapter-02.webp",
-        "assets/images/hdmi-csi-adapter-03.webp",
-        "assets/images/hdmi-csi-adapter-05.webp"
-      ],
-      video: "assets/videos/project-placeholder.mp4",
-      videoPoster: "assets/images/project-placeholder.webp"
-    },
-    {
       title: "Linux Mini PC",
       tagline: "",
       description: "This project's motherboard is an 4-layer SoM carrier designed for the CM5 (Pi Compute Module 5) with CSI, DSI (Camera/Display Serial Interfaces) and USB-3.0 high-speed interfaces. The board also contains an SD card slot for external storage and uses the TI BQ25895 as the charge management chip, allowing USB-C power to recharge the Mini PC's LiPo battery. The enclosure was designed using SolidWorks and was 3D printed.",
@@ -49,6 +33,22 @@ window.PORTFOLIO_DATA = {
         "assets/images/linux-mini-pc-02-assembled.webp",
         "assets/images/linux-mini-pc-03-bare.webp",
         "assets/images/linux-mini-pc-04-enclosure.webp"
+      ],
+      video: "assets/videos/project-placeholder.mp4",
+      videoPoster: "assets/images/project-placeholder.webp"
+    },
+    {
+      title: "HDMI to CSI Adapter",
+      tagline: "",
+      description: "4-Layer board featuring the Toshiba TC358743XBG serving as an HDMI to CSI2 bridge, allowing HDMI signals to be captured and streamed to CSI (Camera Serial Interface) inputs on Linux machines. The TC358743XBG is interfaced with HDMI and CSI connectors, with the high-speed signals being impedance matched accordingly and all of the signals containing ESD protection.",
+      technologies: ["Capture Card Design", "ESD Protection Design", "High-Speed Serial HDMI & MIPI (CSI) Interfaces"],
+      github: "https://github.com/Marko411/HDMI_To_CSI_Adapter",
+      liveUrl: "",
+      images: [
+        "assets/images/hdmi-csi-adapter-04-render.png",
+        "assets/images/hdmi-csi-adapter-02.webp",
+        "assets/images/hdmi-csi-adapter-03.webp",
+        "assets/images/hdmi-csi-adapter-05.webp"
       ],
       video: "assets/videos/project-placeholder.mp4",
       videoPoster: "assets/images/project-placeholder.webp"
