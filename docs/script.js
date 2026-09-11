@@ -73,34 +73,60 @@
     qsa(".project").forEach(setupProjectGallery);
   }
 
+  function buildMediaItems(project) {
+    if (Array.isArray(project.media) && project.media.length) return project.media;
+
+    const items = (project.images || []).slice(0, 4).map((src) => ({ type: "image", src }));
+    if (project.video) items.push({ type: "video", src: project.video, poster: project.videoPoster });
+    return items;
+  }
+
   function projectTemplate(project, index) {
     const number = String(index + 1).padStart(2, "0");
-    const images = (project.images || []).slice(0, 4);
-    const imageCount = images.length;
-    const firstImage = images[0] || "assets/images/project-placeholder.webp";
-    const thumbnails = [...images.map((image, imageIndex) => `
-      <button class="media-thumb" type="button" aria-label="Show image ${imageIndex + 1} for ${escapeAttribute(project.title)}" aria-current="${imageIndex === 0 ? "true" : "false"}" data-type="image" data-src="${escapeAttribute(image)}" data-label="Image ${imageIndex + 1} of ${imageCount}">
-        <img src="${escapeAttribute(image)}" alt="" loading="lazy">
-      </button>
-    `), `
-      <button class="media-thumb video-thumb" type="button" aria-label="Show video for ${escapeAttribute(project.title)}" aria-current="false" data-type="video" data-src="${escapeAttribute(project.video)}" data-poster="${escapeAttribute(project.videoPoster)}" data-label="Video demo">
-        <img src="${escapeAttribute(project.videoPoster)}" alt="" loading="lazy">
-      </button>
-    `].join("");
+    const mediaItems = buildMediaItems(project);
+    const imageCount = mediaItems.filter((item) => item.type === "image").length;
+    const firstMedia = mediaItems[0] || { type: "image", src: "assets/images/project-placeholder.webp" };
+
+    let imageCounter = 0;
+    const thumbnails = mediaItems.map((item, mediaIndex) => {
+      if (item.type === "video") {
+        return `
+          <button class="media-thumb video-thumb" type="button" aria-label="Show video for ${escapeAttribute(project.title)}" aria-current="${mediaIndex === 0 ? "true" : "false"}" data-type="video" data-src="${escapeAttribute(item.src)}" data-poster="${escapeAttribute(item.poster || "")}" data-label="Video demo">
+            <img src="${escapeAttribute(item.poster || "")}" alt="" loading="lazy">
+          </button>
+        `;
+      }
+      imageCounter += 1;
+      return `
+        <button class="media-thumb" type="button" aria-label="Show image ${imageCounter} for ${escapeAttribute(project.title)}" aria-current="${mediaIndex === 0 ? "true" : "false"}" data-type="image" data-src="${escapeAttribute(item.src)}" data-image-index="${imageCounter}" data-label="Image ${imageCounter} of ${imageCount}">
+          <img src="${escapeAttribute(item.src)}" alt="" loading="lazy">
+        </button>
+      `;
+    }).join("");
 
     const liveLink = project.liveUrl
       ? `<a class="button" href="${escapeAttribute(project.liveUrl)}" target="_blank" rel="noreferrer">View live project</a>`
       : "";
+
+    const firstStageMedia = firstMedia.type === "video"
+      ? `<video controls playsinline preload="metadata" poster="${escapeAttribute(firstMedia.poster || "")}" aria-label="${escapeAttribute(project.title)} video demo">
+          <source src="${escapeAttribute(firstMedia.src)}" type="video/mp4">
+          Your browser does not support embedded video.
+        </video>`
+      : `<img src="${escapeAttribute(firstMedia.src)}" alt="${escapeAttribute(project.title)} preview image 1" loading="lazy">`;
+    const firstLabel = firstMedia.type === "video" ? "Video demo" : `Image 1 of ${Math.max(imageCount, 1)}`;
 
     return `
       <article class="project reveal" id="project-${index + 1}" data-project-index="${index}">
         <div class="project-inner container-narrow">
           <div class="project-media">
             <div class="media-stage" aria-live="polite">
-              <span class="media-count">Image 1 of ${Math.max(imageCount, 1)}</span>
-              <img src="${escapeAttribute(firstImage)}" alt="${escapeAttribute(project.title)} preview image 1" loading="lazy">
+              <button class="media-nav media-nav--prev" type="button" aria-label="Show previous media for ${escapeAttribute(project.title)}">‹</button>
+              <span class="media-count">${firstLabel}</span>
+              ${firstStageMedia}
+              <button class="media-nav media-nav--next" type="button" aria-label="Show next media for ${escapeAttribute(project.title)}">›</button>
             </div>
-            <div class="media-thumbnails" style="--thumb-count: ${imageCount + 1}" aria-label="${escapeAttribute(project.title)} media gallery">
+            <div class="media-thumbnails" style="--thumb-count: ${mediaItems.length}" aria-label="${escapeAttribute(project.title)} media gallery">
               ${thumbnails}
             </div>
           </div>
@@ -129,42 +155,54 @@
     const stage = qs(".media-stage", projectElement);
     const count = qs(".media-count", projectElement);
     const thumbs = qsa(".media-thumb", projectElement);
+    const prevButton = qs(".media-nav--prev", projectElement);
+    const nextButton = qs(".media-nav--next", projectElement);
     const projectTitle = qs("h3", projectElement)?.textContent || "Project";
     const initialMedia = qs("img, video", stage);
 
     if (initialMedia) syncStageToMedia(stage, initialMedia);
+    if (!thumbs.length) return;
+
+    let currentIndex = Math.max(thumbs.findIndex((thumb) => thumb.getAttribute("aria-current") === "true"), 0);
+
+    function activate(index) {
+      currentIndex = (index + thumbs.length) % thumbs.length;
+      const thumb = thumbs[currentIndex];
+      const type = thumb.dataset.type;
+      const src = thumb.dataset.src;
+      const label = thumb.dataset.label || "Project media";
+
+      thumbs.forEach((item, itemIndex) => item.setAttribute("aria-current", String(itemIndex === currentIndex)));
+      count.textContent = label;
+
+      if (type === "video") {
+        const video = document.createElement("video");
+        video.controls = true;
+        video.playsInline = true;
+        video.preload = "metadata";
+        video.poster = thumb.dataset.poster || "";
+        video.setAttribute("aria-label", `${projectTitle} video demo`);
+
+        const source = document.createElement("source");
+        source.src = src;
+        source.type = "video/mp4";
+        video.append(source);
+        video.append(document.createTextNode("Your browser does not support embedded video."));
+        replaceStageMedia(stage, video);
+      } else {
+        const image = document.createElement("img");
+        image.src = src;
+        image.alt = `${projectTitle} preview image ${thumb.dataset.imageIndex || currentIndex + 1}`;
+        replaceStageMedia(stage, image);
+      }
+    }
 
     thumbs.forEach((thumb, index) => {
-      thumb.addEventListener("click", () => {
-        const type = thumb.dataset.type;
-        const src = thumb.dataset.src;
-        const label = thumb.dataset.label || "Project media";
-
-        thumbs.forEach((item) => item.setAttribute("aria-current", String(item === thumb)));
-        count.textContent = label;
-
-        if (type === "video") {
-          const video = document.createElement("video");
-          video.controls = true;
-          video.playsInline = true;
-          video.preload = "metadata";
-          video.poster = thumb.dataset.poster || "";
-          video.setAttribute("aria-label", `${projectTitle} video demo`);
-
-          const source = document.createElement("source");
-          source.src = src;
-          source.type = "video/mp4";
-          video.append(source);
-          video.append(document.createTextNode("Your browser does not support embedded video."));
-          replaceStageMedia(stage, video);
-        } else {
-          const image = document.createElement("img");
-          image.src = src;
-          image.alt = `${projectTitle} preview image ${index + 1}`;
-          replaceStageMedia(stage, image);
-        }
-      });
+      thumb.addEventListener("click", () => activate(index));
     });
+
+    prevButton?.addEventListener("click", () => activate(currentIndex - 1));
+    nextButton?.addEventListener("click", () => activate(currentIndex + 1));
   }
 
   function replaceStageMedia(stage, newMedia) {
