@@ -434,24 +434,24 @@ button, input, textarea, select { font: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   padding: 0;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(120, 124, 132, 0.35);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.45);
+  background: rgba(140, 144, 152, 0.22);
+  color: rgba(90, 94, 102, 0.8);
   cursor: pointer;
   transition: opacity 160ms ease, background-color 160ms ease, border-color 160ms ease, color 160ms ease;
   transform: translateY(-50%);
 }
 .media-nav svg {
   display: block;
-  width: 16px;
-  height: 16px;
+  width: 32px;
+  height: 32px;
 }
-.media-nav:hover { background: rgba(255, 255, 255, 0.16); border-color: rgba(255, 255, 255, 0.28); color: rgba(255, 255, 255, 0.75); }
-.media-nav:focus-visible { outline: 2px solid rgba(255, 255, 255, 0.6); outline-offset: 2px; }
+.media-nav:hover { background: rgba(140, 144, 152, 0.34); border-color: rgba(120, 124, 132, 0.5); color: rgba(60, 64, 72, 0.92); }
+.media-nav:focus-visible { outline: 2px solid rgba(90, 94, 102, 0.7); outline-offset: 2px; }
 .media-nav--prev { left: 12px; }
 .media-nav--next { right: 12px; }
 .media-thumbnails {
