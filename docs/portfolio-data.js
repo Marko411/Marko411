@@ -1,7 +1,7 @@
 window.PORTFOLIO_DATA = {
   person: {
     name: "Marko Jevtic",
-    role: "4th Computer Engineering Student",
+    role: "4th Year Computer Engineering Student",
     headline: "Marko Jevtic",
     summary: "Hardware Design Personal Project Portfolio",
     photo: "assets/images/marko-jevtic-profile.webp",
@@ -34,8 +34,8 @@ window.PORTFOLIO_DATA = {
         "assets/images/linux-mini-pc-03-bare.webp",
         "assets/images/linux-mini-pc-04-enclosure.webp"
       ],
-      video: "assets/videos/project-placeholder.mp4",
-      videoPoster: "assets/images/project-placeholder.webp"
+      video: "assets/videos/linux-mini-pc-demo.mp4",
+      videoPoster: "assets/images/linux-mini-pc-video-poster.jpg"
     },
     {
       title: "HDMI to CSI Adapter",
@@ -48,7 +48,7 @@ window.PORTFOLIO_DATA = {
         { type: "image", src: "assets/images/hdmi-csi-adapter-04-render.png" },
         { type: "image", src: "assets/images/hdmi-csi-adapter-05.webp" },
         { type: "image", src: "assets/images/hdmi-csi-adapter-03.webp" },
-        { type: "video", src: "assets/videos/project-placeholder.mp4", poster: "assets/images/project-placeholder.webp" },
+        { type: "video", src: "assets/videos/hdmi-csi-adapter-demo.mp4", poster: "assets/images/hdmi-csi-adapter-video-poster.jpg" },
         { type: "image", src: "assets/images/hdmi-csi-adapter-02.webp" }
       ]
     },
@@ -63,7 +63,7 @@ window.PORTFOLIO_DATA = {
         { type: "image", src: "assets/images/rp2354a-minima-01-render.png" },
         { type: "image", src: "assets/images/rp2354a-minima-03.webp" },
         { type: "image", src: "assets/images/rp2354a-minima-04-ribbon.webp" },
-        { type: "video", src: "assets/videos/project-placeholder.mp4", poster: "assets/images/project-placeholder.webp" },
+        { type: "video", src: "assets/videos/rp2354a-minima-demo.mp4", poster: "assets/images/rp2354a-minima-video-poster.jpg" },
         { type: "image", src: "assets/images/rp2354a-minima-02.webp" }
       ]
     },
