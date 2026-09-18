@@ -10,6 +10,7 @@ window.PORTFOLIO_DATA = {
     email: "mjevtic@uoguelph.ca",
     github: "https://github.com/Marko411",
     linkedin: "https://www.linkedin.com/in/marko-jevtic-904b7b344",
+    resume: "assets/documents/marko-jevtic-resume.pdf",
     links: [
       { label: "GitHub", url: "https://github.com/Marko411" },
       { label: "LinkedIn", url: "https://www.linkedin.com/in/marko-jevtic-904b7b344" },

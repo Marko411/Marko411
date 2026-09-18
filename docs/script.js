@@ -32,6 +32,7 @@
     setLink("#hero-github", person.github);
     setLink("#hero-linkedin", person.linkedin);
     setLink("#hero-email", `mailto:${person.email}`);
+    setLink("#hero-resume", person.resume);
 
     const photo = qs("#profile-photo");
     if (photo) {
