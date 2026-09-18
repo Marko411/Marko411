@@ -66,6 +66,7 @@ window.PORTFOLIO_DATA = {
       technologies: ["RP2350A", "PCB Design", "Microcontroller Interfacing"],
       github: "https://github.com/Marko411/RP2350A-Development-Board",
       liveUrl: "",
+      mediaScale: 0.8,
       media: [
         { type: "image", src: "assets/images/rp2350a-01-render.png" },
         { type: "video", src: "assets/videos/rp2350a-development-board.mp4", poster: "assets/images/rp2350a-video-poster.jpg" },
