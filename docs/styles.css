@@ -152,10 +152,10 @@ button, input, textarea, select { font: inherit; }
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.18fr) minmax(310px, 0.62fr);
-  gap: clamp(24px, 3vw, 48px);
+  gap: clamp(16px, 2vw, 32px);
   align-items: center;
   min-height: auto;
-  max-width: 1146px;
+  max-width: 1130px;
   padding-block: clamp(40px, 4.5vw, 58px) clamp(18px, 2vw, 28px);
 }
 
@@ -193,7 +193,7 @@ button, input, textarea, select { font: inherit; }
 
 .portrait-card {
   position: relative;
-  width: min(100%, 350px);
+  width: min(100%, 380px);
   justify-self: end;
   align-self: center;
   margin: 0;
@@ -292,8 +292,9 @@ button, input, textarea, select { font: inherit; }
 .media-stage {
   position: relative;
   display: grid;
-  width: min(100%, calc(56vh * var(--media-ratio, 1.7778)));
+  width: 100%;
   max-width: 100%;
+  max-height: 640px;
   margin-inline: auto;
   overflow: hidden;
   padding: 2px;
@@ -569,7 +570,7 @@ button, input, textarea, select { font: inherit; }
   .project-copy { padding: 0 7px 10px; }
   .project-copy h3 { font-size: clamp(2.75rem, 13.5vw, 4.35rem); }
   .project-description { font-size: 1.08rem; line-height: 1.72; }
-  .media-stage { width: min(100%, calc(48vh * var(--media-ratio, 1.7778))); }
+  .media-stage { max-height: 60vh; }
   .media-thumbnails {
     gap: 7px;
     overflow-x: auto;
