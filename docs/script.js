@@ -23,17 +23,15 @@
   function populatePerson() {
     const { person } = data;
     document.title = `${person.name} — Portfolio`;
-    setText("#brand-name", person.name);
     setText("#hero-eyebrow", person.role);
     setText("#hero-title", person.headline);
     setText("#hero-summary", person.summary);
     setText("#portrait-caption", person.availability);
     setText("#footer-name", person.name);
 
-    setLink("#nav-github", person.github);
     setLink("#hero-github", person.github);
-    setLink("#nav-contact", `mailto:${person.email}`);
-    setLink("#contact-button", `mailto:${person.email}`);
+    setLink("#hero-linkedin", person.linkedin);
+    setLink("#hero-email", `mailto:${person.email}`);
 
     const photo = qs("#profile-photo");
     if (photo) {
@@ -227,30 +225,6 @@
     }
   }
 
-  function setupMenu() {
-    const button = qs(".menu-button");
-    const nav = qs(".site-nav");
-    if (!button || !nav) return;
-
-    const closeMenu = () => {
-      button.setAttribute("aria-expanded", "false");
-      nav.classList.remove("is-open");
-      document.body.classList.remove("menu-open");
-    };
-
-    button.addEventListener("click", () => {
-      const isOpen = button.getAttribute("aria-expanded") === "true";
-      button.setAttribute("aria-expanded", String(!isOpen));
-      nav.classList.toggle("is-open", !isOpen);
-      document.body.classList.toggle("menu-open", !isOpen);
-    });
-
-    qsa("a", nav).forEach((link) => link.addEventListener("click", closeMenu));
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 760) closeMenu();
-    });
-  }
-
   function setupObservers() {
     const revealItems = qsa(".reveal");
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -299,7 +273,6 @@
 
   populatePerson();
   renderProjects();
-  setupMenu();
   setupObservers();
   setText("#current-year", new Date().getFullYear());
 })();
