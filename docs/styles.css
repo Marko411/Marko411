@@ -74,6 +74,11 @@ button, input, textarea, select { font: inherit; }
   margin-inline: auto;
 }
 
+.container-narrow {
+  width: min(calc(100% - 40px), 1040px);
+  margin-inline: auto;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

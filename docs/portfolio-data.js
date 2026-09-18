@@ -21,7 +21,7 @@ window.PORTFOLIO_DATA = {
       title: "Linux Mini PC",
       tagline: "",
       description: "This project's motherboard is an 4-layer SoM carrier designed for the CM5 (Pi Compute Module 5) with CSI, DSI (Camera/Display Serial Interfaces) and USB-3.0 high-speed interfaces. The board also contains an SD card slot for external storage and uses the TI BQ25895 as the charge management chip, allowing USB-C power to recharge the Mini PC's LiPo battery. The enclosure was designed using SolidWorks and was 3D printed.",
-      technologies: ["SoM Carrier Design", "Rechargeable Power System Design", "High-speed Serial USB-3.0 and MIPI (CSI + DSI) Interfaces"],
+      technologies: ["SoM Carrier Design", "Rechargeable Power System Design", "High-speed Serial USB-3.0 and MIPI Interfaces"],
       github: "https://github.com/Marko411/Linux-Mini-PC",
       liveUrl: "",
       media: [
@@ -46,7 +46,7 @@ window.PORTFOLIO_DATA = {
       ]
     },
     {
-      title: "RP2354A Minima Board Family",
+      title: "RP2354A Minima",
       tagline: "",
       description: "Miniature 4-layer version of my development board project featuring the RP2354A, the built-in flash version of the RP2350, interfaced with an ABM8-272-T3 12MHz oscillator for timing and an LED on GPIO0 for indication. Connects to a GPIO expansion board using an FPC cable which breaks out GPIO 0-29 signals and 3V3, 5V and GND rails. ",
       technologies: ["RP2354A", "Built-In Flash MCU Interfacing", "PCB Miniaturization"],
@@ -60,7 +60,7 @@ window.PORTFOLIO_DATA = {
       ]
     },
     {
-      title: "RP2350A Development Board",
+      title: "RP2350A Dev Board",
       tagline: "",
       description: "2-Layer board designed in Altium Designer 25 and assembled using JLCPCB services\n\nRP2350A microcontroller interfaced with the W25Q128JVS 16 MB external flash and ABM8-272-T3 12MHz oscillator for storage and timing.\n\nBuilt-in Indicator LED connected to GPIO0, GPIO pins 1-29 broken out alongside 3V3 and GND signals using two 16-pin connectors. ",
       technologies: ["RP2350A", "PCB Design", "Microcontroller Interfacing"],
