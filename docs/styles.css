@@ -152,9 +152,10 @@ button, input, textarea, select { font: inherit; }
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.18fr) minmax(310px, 0.62fr);
-  gap: clamp(42px, 6vw, 82px);
+  gap: clamp(24px, 3vw, 48px);
   align-items: center;
   min-height: auto;
+  max-width: 1146px;
   padding-block: clamp(40px, 4.5vw, 58px) clamp(18px, 2vw, 28px);
 }
 
@@ -192,7 +193,7 @@ button, input, textarea, select { font: inherit; }
 
 .portrait-card {
   position: relative;
-  width: min(100%, 320px);
+  width: min(100%, 350px);
   justify-self: end;
   align-self: center;
   margin: 0;
