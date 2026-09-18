@@ -9,6 +9,7 @@ window.PORTFOLIO_DATA = {
     availability: "Hardware Design Personal Project Portfolio",
     email: "mjevtic@uoguelph.ca",
     github: "https://github.com/Marko411",
+    linkedin: "https://www.linkedin.com/in/marko-jevtic-904b7b344",
     links: [
       { label: "GitHub", url: "https://github.com/Marko411" },
       { label: "LinkedIn", url: "https://www.linkedin.com/in/marko-jevtic-904b7b344" },

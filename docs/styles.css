@@ -41,7 +41,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-body.menu-open { overflow: hidden; }
 img, video { display: block; max-width: 100%; }
 a { color: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
@@ -102,84 +101,6 @@ button, input, textarea, select { font: inherit; }
 }
 .skip-link:focus { transform: translateY(0); }
 
-.site-header {
-  position: sticky;
-  z-index: 100;
-  top: 0;
-  height: var(--header-height);
-  border-bottom: 1px solid var(--line);
-  background: rgba(7, 11, 20, 0.84);
-  backdrop-filter: blur(18px);
-}
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 780;
-  letter-spacing: -0.025em;
-  text-decoration: none;
-}
-
-.brand-mark {
-  display: grid;
-  width: 36px;
-  height: 36px;
-  place-items: center;
-  border: 1px solid var(--line-strong);
-  border-radius: 8px;
-  background: rgba(93, 169, 255, 0.08);
-  color: var(--accent);
-  font: 800 0.72rem/1 var(--mono);
-  letter-spacing: 0.04em;
-  box-shadow: inset 0 0 0 1px rgba(93, 169, 255, 0.03);
-}
-
-.site-nav {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-
-.site-nav > a:not(.button) {
-  color: var(--muted);
-  font-size: 0.88rem;
-  font-weight: 680;
-  text-decoration: none;
-}
-.site-nav > a:not(.button):hover { color: var(--text); }
-
-.menu-button {
-  display: none;
-  width: 44px;
-  height: 44px;
-  padding: 10px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: var(--surface);
-  cursor: pointer;
-}
-
-.menu-button span:not(.sr-only) {
-  display: block;
-  width: 22px;
-  height: 2px;
-  margin: 4px auto;
-  border-radius: 2px;
-  background: var(--text);
-  transition: transform 180ms ease, opacity 180ms ease;
-}
-.menu-button[aria-expanded="true"] span:nth-child(2) { transform: translateY(6px) rotate(45deg); }
-.menu-button[aria-expanded="true"] span:nth-child(3) { opacity: 0; }
-.menu-button[aria-expanded="true"] span:nth-child(4) { transform: translateY(-6px) rotate(-45deg); }
-
 .button {
   display: inline-flex;
   align-items: center;
@@ -229,7 +150,7 @@ button, input, textarea, select { font: inherit; }
   gap: clamp(42px, 6vw, 82px);
   align-items: center;
   min-height: auto;
-  padding-block: clamp(52px, 5.5vw, 74px) clamp(18px, 2vw, 28px);
+  padding-block: clamp(40px, 4.5vw, 58px) clamp(18px, 2vw, 28px);
 }
 
 .hero h1 {
@@ -266,7 +187,7 @@ button, input, textarea, select { font: inherit; }
 
 .portrait-card {
   position: relative;
-  width: min(100%, 390px);
+  width: min(100%, 320px);
   justify-self: end;
   align-self: center;
   margin: 0;
@@ -635,22 +556,6 @@ button, input, textarea, select { font: inherit; }
   :root { --header-height: 68px; --radius-lg: 20px; --radius-md: 14px; }
   .container { width: min(calc(100% - 28px), var(--container)); }
   .page-grid { background-size: 34px 34px; }
-  .menu-button { display: block; }
-  .site-nav {
-    position: fixed;
-    inset: var(--header-height) 0 auto;
-    display: grid;
-    gap: 0;
-    padding: 18px 14px 24px;
-    border-bottom: 1px solid var(--line);
-    background: rgba(7, 11, 20, 0.98);
-    transform: translateY(-130%);
-    visibility: hidden;
-    transition: transform 220ms ease, visibility 220ms ease;
-  }
-  .site-nav.is-open { transform: translateY(0); visibility: visible; }
-  .site-nav > a { padding: 15px 12px; }
-  .site-nav .button { margin-top: 10px; }
   .hero { grid-template-columns: 1fr; min-height: auto; padding-block: 52px 28px; }
   .hero h1 { font-size: clamp(2.85rem, 12vw, 4.2rem); }
   .hero-summary { margin-top: 24px; }
@@ -675,7 +580,6 @@ button, input, textarea, select { font: inherit; }
 }
 
 @media (max-width: 430px) {
-  .brand > span:last-child { font-size: 0.92rem; }
   .hero-actions, .project-links { align-items: stretch; flex-direction: column; }
   .hero-actions .button, .project-links .button, .contact-card .button { width: 100%; }
   .hero-actions .text-link, .project-links .github-link { justify-content: center; }
