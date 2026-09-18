@@ -28,14 +28,12 @@ window.PORTFOLIO_DATA = {
       technologies: ["SoM Carrier Design", "Rechargeable Power System Design", "High-speed Serial USB-3.0 and MIPI (CSI + DSI) Interfaces"],
       github: "https://github.com/Marko411/Linux-Mini-PC",
       liveUrl: "",
-      images: [
-        "assets/images/linux-mini-pc-01-render.jpg",
-        "assets/images/linux-mini-pc-02-assembled.webp",
-        "assets/images/linux-mini-pc-03-bare.webp",
-        "assets/images/linux-mini-pc-04-enclosure.webp"
-      ],
-      video: "assets/videos/linux-mini-pc-demo.mp4",
-      videoPoster: "assets/images/linux-mini-pc-video-poster.jpg"
+      media: [
+        { type: "image", src: "assets/images/linux-mini-pc-01-render.jpg" },
+        { type: "video", src: "assets/videos/linux-mini-pc-demo.mp4", poster: "assets/images/linux-mini-pc-video-poster.jpg" },
+        { type: "image", src: "assets/images/linux-mini-pc-02-assembled.webp" },
+        { type: "image", src: "assets/images/linux-mini-pc-04-enclosure.webp" }
+      ]
     },
     {
       title: "HDMI to CSI Adapter",
@@ -46,9 +44,8 @@ window.PORTFOLIO_DATA = {
       liveUrl: "",
       media: [
         { type: "image", src: "assets/images/hdmi-csi-adapter-04-render.png" },
-        { type: "image", src: "assets/images/hdmi-csi-adapter-05.webp" },
-        { type: "image", src: "assets/images/hdmi-csi-adapter-03.webp" },
         { type: "video", src: "assets/videos/hdmi-csi-adapter-demo.mp4", poster: "assets/images/hdmi-csi-adapter-video-poster.jpg" },
+        { type: "image", src: "assets/images/hdmi-csi-adapter-05.webp" },
         { type: "image", src: "assets/images/hdmi-csi-adapter-02.webp" }
       ]
     },
@@ -61,10 +58,9 @@ window.PORTFOLIO_DATA = {
       liveUrl: "",
       media: [
         { type: "image", src: "assets/images/rp2354a-minima-01-render.png" },
-        { type: "image", src: "assets/images/rp2354a-minima-03.webp" },
-        { type: "image", src: "assets/images/rp2354a-minima-04-ribbon.webp" },
         { type: "video", src: "assets/videos/rp2354a-minima-demo.mp4", poster: "assets/images/rp2354a-minima-video-poster.jpg" },
-        { type: "image", src: "assets/images/rp2354a-minima-02.webp" }
+        { type: "image", src: "assets/images/rp2354a-minima-03.webp" },
+        { type: "image", src: "assets/images/rp2354a-minima-04-ribbon.webp" }
       ]
     },
     {
@@ -74,14 +70,12 @@ window.PORTFOLIO_DATA = {
       technologies: ["RP2350A", "PCB Design", "Microcontroller Interfacing"],
       github: "https://github.com/Marko411/RP2350A-Development-Board",
       liveUrl: "",
-      images: [
-        "assets/images/rp2350a-01-render.png",
-        "assets/images/rp2350a-02-wall.webp",
-        "assets/images/rp2350a-03-hand.webp",
-        "assets/images/rp2350a-04-layers.png"
-      ],
-      video: "assets/videos/rp2350a-development-board.mp4",
-      videoPoster: "assets/images/rp2350a-video-poster.jpg"
+      media: [
+        { type: "image", src: "assets/images/rp2350a-01-render.png" },
+        { type: "video", src: "assets/videos/rp2350a-development-board.mp4", poster: "assets/images/rp2350a-video-poster.jpg" },
+        { type: "image", src: "assets/images/rp2350a-02-wall.webp" },
+        { type: "image", src: "assets/images/rp2350a-03-hand.webp" }
+      ]
     }
   ]
 };
