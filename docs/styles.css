@@ -153,7 +153,7 @@ button, input, textarea, select { font: inherit; }
   display: grid;
   grid-template-columns: minmax(0, 1.18fr) minmax(310px, 0.62fr);
   gap: clamp(16px, 2vw, 32px);
-  align-items: center;
+  align-items: end;
   min-height: auto;
   max-width: 1130px;
   padding-block: clamp(40px, 4.5vw, 58px) clamp(18px, 2vw, 28px);
