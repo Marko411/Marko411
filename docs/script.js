@@ -41,16 +41,6 @@
       photo.alt = person.photoAlt || `Portrait of ${person.name}`;
     }
 
-    const facts = qs("#quick-facts");
-    if (facts) {
-      facts.innerHTML = person.facts.map((fact) => `
-        <li>
-          <strong>${escapeHtml(fact.value)}</strong>
-          <span>${escapeHtml(fact.label)}</span>
-        </li>
-      `).join("");
-    }
-
     const footerLinks = qs("#footer-links");
     if (footerLinks) {
       footerLinks.innerHTML = person.links.map((link) => {
