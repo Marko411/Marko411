@@ -4,3 +4,4 @@
 *  I am a 4th year Computer Engineering student and I will be showing my non-proprietary and open-source projects here.
 *  My interests primarily lie in embedded hardware, PCB design and analog circuit design.
 *  If you wish to contact me, please do so using mjevtic@uoguelph.ca.
+*  To view demos of the projects seen here, please visit markoj.ca.
