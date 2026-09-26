@@ -428,23 +428,7 @@ button, input, textarea, select { font: inherit; }
   font-size: clamp(1.08rem, 1.35vw, 1.2rem);
   line-height: 1.78;
 }
-.project-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-  padding: 0;
-  margin: 28px 0 0;
-  list-style: none;
-}
-.project-meta li {
-  padding: 7px 10px;
-  border: 1px solid var(--line);
-  border-radius: 7px;
-  color: #bbc7d8;
-  background: rgba(93, 169, 255, 0.045);
-  font: 680 0.72rem/1.4 var(--mono);
-}
-.project-stack { margin: 18px 0 0; }
+.project-stack { margin: 28px 0 0; }
 .project-stack-label {
   display: block;
   margin-bottom: 9px;
