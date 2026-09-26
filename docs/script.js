@@ -132,6 +132,14 @@
             <ul class="project-meta" aria-label="Technologies used">
               ${(project.technologies || []).map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
             </ul>
+            ${(project.techStack && project.techStack.length) ? `
+              <div class="project-stack">
+                <span class="project-stack-label">Tech Stackup Used</span>
+                <ul aria-label="Tech stack used">
+                  ${project.techStack.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+                </ul>
+              </div>
+            ` : ""}
             <div class="project-links">
               ${liveLink}
               <a class="github-link" href="${escapeAttribute(project.github)}" target="_blank" rel="noreferrer">
