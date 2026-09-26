@@ -129,9 +129,6 @@
             <h3>${escapeHtml(project.title)}</h3>
             ${project.tagline ? `<p class="project-tagline">${escapeHtml(project.tagline)}</p>` : ""}
             <p class="project-description">${escapeHtml(project.description)}</p>
-            <ul class="project-meta" aria-label="Technologies used">
-              ${(project.technologies || []).map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
-            </ul>
             ${(project.techStack && project.techStack.length) ? `
               <div class="project-stack">
                 <span class="project-stack-label">Tech Stackup Used</span>
